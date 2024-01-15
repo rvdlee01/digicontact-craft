@@ -1,0 +1,58 @@
+fieldLayouts:
+  5d0cbba1-f2e7-484d-94a1-8849224fe124:
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            autocapitalize: true
+            autocomplete: false
+            autocorrect: true
+            class: null
+            disabled: false
+            elementCondition: null
+            id: null
+            instructions: null
+            label: null
+            max: null
+            min: null
+            name: null
+            orientation: null
+            placeholder: null
+            readonly: false
+            requirable: false
+            size: null
+            step: null
+            tip: null
+            title: null
+            type: craft\fieldlayoutelements\entries\EntryTitleField
+            uid: 93d031c9-51aa-48f1-b2f9-94d7a5901eec
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 01fbd320-869f-4cca-a22a-00fdb1a91bc8 # Pagina
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 5633ccdb-538c-4e27-a357-49d2e89d7da4
+            userCondition: null
+            warning: null
+            width: 100
+        name: Inhoud
+        uid: 5e41b369-bb40-4077-b4e1-ef68fdf16889
+        userCondition: null
+handle: link
+hasTitleField: false
+name: Link
+section: f40f2712-8b81-4801-912f-4e1c1e87ab93 # Footermenu
+showStatusField: true
+slugTranslationKeyFormat: null
+slugTranslationMethod: site
+sortOrder: 1
+titleFormat: '{entryLink.getText|length > 50 ? entryTitle|slice(0, 50) ~ ''...'' : entryLink.getText}'
+titleTranslationKeyFormat: null
+titleTranslationMethod: site

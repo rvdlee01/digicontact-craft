@@ -1,0 +1,99 @@
+<div x-data="cookiebar" x-init="addCookies();">
+    <button @click="toggleCookieBar()" class="transition opacity-50 hover:opacity-100">Cookies</button>
+
+    <div x-data="{ showOptions: false }" x-show="!cookiesSet || showCookieBar" x-cloak>
+        <div class="md-min:hidden z-40 w-full h-full bg-gradient-to-t from-[#000] to-transparent fixed top-0 left-0 right-0 bottom-0 opacity-30 pointer-events-none"></div>
+
+        <div class="fixed bottom-0 font-sans drop-shadow-[0_1px_24px_rgba(0,0,0,0.16)] z-[99999999] xs:left-inherit left-0 xs:left-auto xs:right-[32px] xs:w-[310px] w-full bg-[#FFF] shadow-2xl">
+            <div class="pt-[24px] px-[16px] pb-[32px] bg-[#F7F7F7]">
+                <div class="flex justify-start items-center mb-[8px]">
+                    <img src="/img/cookie.svg" alt="•">
+                    <p class="text-[20px] font-bold ml-[8px] text-[#000]">Cookies & privacy</p>
+                </div>
+
+                <p class="text-[15px] leading-[24px] text-[#000] text-opacity-70">Wij maken gebruik van functionele en
+                    analystische cookies voor optimalisatie en statistieken.</p>
+
+                <div class="flex mt-[16px] mb-[-8px] block" x-show="showOptions" x-collapse>
+                    <a href="/privacy-statement" class="underline text-[13px] mr-[20px] transition hover:opacity-50">Privacy statement</a>
+                    <a href="/cookie-verklaring" class="underline text-[13px] transition hover:opacity-50">Cookieverklaring</a>
+                </div>
+            </div>
+
+            <div x-show="showOptions" x-collapse>
+                <div class="pb-[20px]">
+                    <label for="essential"
+                           class="!pointer-events-none !cursor-default flex justify-between p-[16px] border-t border-[#E9E9E9]">
+                    <span>
+                        <i class="fas fa-lock-alt text-[14px] text-[#000] text-opacity-30 mr-[4px] transform translate-y-[-1px]"></i>
+                        <span class="text-[#000] text-opacity-50">Noodzakelijk</span>
+                    </span>
+
+                        <span class="relative inline-block w-[48px] ml-[16px] align-middle select-none transition duration-200 ease-in">
+                        <input type="checkbox" name="essential" id="essential" checked
+                               class="toggle-checkbox disabled absolute block w-[24px] h-[24px] rounded-full bg-white border-2 border-[#D2D2D2] appearance-none cursor-pointer transition-all"/>
+                        <span class="toggle-label block overflow-hidden h-[24px] rounded-full bg-[#D2D2D2] cursor-pointer"></span>
+                        <svg class="absolute top-[8px] right-[6px]" height="9" viewBox="0 0 12 9" width="12"
+                             xmlns="http://www.w3.org/2000/svg"><path
+                                    d="m34.9240751 16.773066c-.2342936.2341401-.6139957.2341401-.8482893 0l-3.9001808-3.9001808c-.23414-.2342936-.23414-.6139957 0-.8482893l.8482894-.8486643c.1125309-.1125567.2651711-.1757925.4243321-.1757925s.3118012.0632358.4243322.1757925l2.6273718 2.6273717 5.6275108-5.62751078c.112531-.11255668.2651712-.17579252.4243322-.17579252s.3118012.06323584.4243321.17579252l.8482894.84866433c.23414.23429359.23414.61399573 0 .84828932z"
+                                    fill="#d2d2d2" transform="translate(-30 -8)"/></svg>
+                    </span>
+                    </label>
+
+                    <label for="statistics"
+                           class="cursor-pointer flex justify-between p-[16px] border-t border-[#E9E9E9]">
+                        <span class="text-[#000]">Statistieken</span>
+
+                        <span class="relative inline-block w-[48px] ml-[16px] align-middle select-none transition duration-200 ease-in">
+                        <input type="checkbox" id="statistics"
+                               x-model="statistics"
+                               class="toggle-checkbox absolute block w-[24px] h-[24px] rounded-full bg-white border-2 border-[#D2D2D2] appearance-none cursor-pointer transition-all"/>
+                        <span class="toggle-label block overflow-hidden h-[24px] rounded-full bg-[#D2D2D2] cursor-pointer"></span>
+                        <svg class="absolute top-[8px] right-[6px] transition" height="9" viewBox="0 0 12 9"
+                             width="12" xmlns="http://www.w3.org/2000/svg"><path
+                                    d="m34.9240751 16.773066c-.2342936.2341401-.6139957.2341401-.8482893 0l-3.9001808-3.9001808c-.23414-.2342936-.23414-.6139957 0-.8482893l.8482894-.8486643c.1125309-.1125567.2651711-.1757925.4243321-.1757925s.3118012.0632358.4243322.1757925l2.6273718 2.6273717 5.6275108-5.62751078c.112531-.11255668.2651712-.17579252.4243322-.17579252s.3118012.06323584.4243321.17579252l.8482894.84866433c.23414.23429359.23414.61399573 0 .84828932z"
+                                    fill="#38C172" transform="translate(-30 -8)"/></svg>
+                    </span>
+                    </label>
+
+                    <label for="marketing"
+                           class="cursor-pointer flex justify-between p-[16px] border-t border-[#E9E9E9]">
+                        <span class="text-[#000]">Marketing</span>
+
+                        <span class="relative inline-block w-[48px] ml-[16px] align-middle select-none transition duration-200 ease-in">
+                        <input type="checkbox" id="marketing"
+                               x-model="marketing"
+                               class="toggle-checkbox absolute block w-[24px] h-[24px] rounded-full bg-white border-2 border-[#D2D2D2] appearance-none cursor-pointer transition-all"/>
+                        <span class="toggle-label block overflow-hidden h-[24px] rounded-full bg-[#D2D2D2] cursor-pointer"></span>
+                         <svg class="absolute top-[8px] right-[6px] transition" height="9" viewBox="0 0 12 9"
+                              width="12" xmlns="http://www.w3.org/2000/svg"><path
+                                     d="m34.9240751 16.773066c-.2342936.2341401-.6139957.2341401-.8482893 0l-3.9001808-3.9001808c-.23414-.2342936-.23414-.6139957 0-.8482893l.8482894-.8486643c.1125309-.1125567.2651711-.1757925.4243321-.1757925s.3118012.0632358.4243322.1757925l2.6273718 2.6273717 5.6275108-5.62751078c.112531-.11255668.2651712-.17579252.4243322-.17579252s.3118012.06323584.4243321.17579252l.8482894.84866433c.23414.23429359.23414.61399573 0 .84828932z"
+                                     fill="#38C172" transform="translate(-30 -8)"/></svg>
+                    </span>
+                    </label>
+                </div>
+            </div>
+
+            <div class="flex px-[16px] py-[24px] border-t border-[#E9E9E9] relative">
+                <button @click="toggleOptions()"
+                        class="absolute top-0 left-0 right-0 mx-auto rounded-full border-solid bg-white w-[32px] h-[32px] flex items-center justify-center border border-[#E9E9E9] transform translate-y-[-22px] focus:outline-none">
+                    <svg class="transform transition-all" :class="{ 'rotate-180': showOptions }" height="13"
+                         viewBox="0 0 12 13"
+                         width="12" xmlns="http://www.w3.org/2000/svg">
+                        <path d="m16.2229021 9.1541958 5.4335664 5.3895105c.1725525.1725524.1725525.4515734 0 .6241259l-.726923.726923c-.1725525.1725525-.4515735.1725525-.6241259 0l-4.3945804-4.3505244-4.3945805 4.3505244c-.1725524.1725525-.4515734.1725525-.6241258 0l-.7269231-.726923c-.17255246-.1725525-.17255246-.4515735 0-.6241259l5.4335664-5.3895105c.1725525-.17255244.4515735-.17255244.6241259 0zm-.6241259 5.8741259-5.4335664 5.3895105c-.17255246.1725524-.17255246.4515734 0 .6241258l.7269231.7269231c.1725524.1725525.4515734.1725525.6241258 0l4.3945805-4.3505245 4.3945804 4.3505245c.1725524.1725525.4515734.1725525.6241259 0l.726923-.7269231c.1725525-.1725524.1725525-.4515734 0-.6241258l-5.4335664-5.3895105c-.1725524-.1725525-.4515734-.1725525-.6241259 0z"
+                              transform="translate(-10 -9)"/>
+                    </svg>
+                </button>
+
+                <button @click="setCookies()"
+                        class="bg-[#000] text-white px-[32px] py-[12px] transition-all hover:bg-opacity-70 flex-1">
+                    <span x-text="showOptions ? 'Opslaan' : 'Ik ga akkoord'"></span>
+                </button>
+
+                <div class="flex justify-center items-center px-[16px] underline outline-none hover:text-opacity-100">
+                    <button class="outline-none" @click="toggleOptions()" x-text="showOptions ? 'Inklappen' : 'Instellen'"></button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,19 @@
+columnSuffix: ukuajwho
+contentColumnType: text
+fieldGroup: e4858655-0573-47a8-b27f-81be06276f46 # Common
+handle: phone
+instructions: null
+name: Telefoon
+searchable: false
+settings:
+  byteLimit: null
+  charLimit: null
+  code: false
+  columnType: null
+  initialRows: 4
+  multiline: false
+  placeholder: null
+  uiMode: normal
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\PlainText

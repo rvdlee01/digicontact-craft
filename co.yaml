@@ -1,0 +1,8 @@
+driver: craft4
+remote:
+  host: 162.55.53.104
+  username: boilerplate-craft
+  path: /home/boilerplate-craft/boilerplate-craft.app-1.creativeorange.nl
+files:
+  - remote: shared/web/upload
+    local: web/upload

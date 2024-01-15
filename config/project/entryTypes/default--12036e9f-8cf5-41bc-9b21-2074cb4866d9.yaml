@@ -1,0 +1,53 @@
+fieldLayouts:
+  ee9e0c73-e646-494f-ba2a-99d6289300a4:
+    tabs:
+      -
+        elements:
+          -
+            autocapitalize: true
+            autocomplete: false
+            autocorrect: true
+            class: null
+            disabled: false
+            id: null
+            instructions: null
+            label: null
+            max: null
+            min: null
+            name: null
+            orientation: null
+            placeholder: null
+            readonly: false
+            requirable: false
+            size: null
+            step: null
+            tip: null
+            title: null
+            type: craft\fieldlayoutelements\entries\EntryTitleField
+            uid: dc57e0e8-3e27-4e75-b8fc-ecd16a427c20
+            warning: null
+            width: 100
+        name: Inhoud
+        uid: d0710ed2-a6a0-4d10-9c1a-009463563c01
+      -
+        elements:
+          -
+            fieldUid: 24f17415-8885-426b-a272-f0957203b94d # SEO
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: c5941e90-bd5c-4e4c-babb-75d5882c862e
+            warning: null
+            width: 100
+        name: SEO
+        uid: 4a84541e-9cd8-4c3a-ade7-6326a9ae6d2e
+handle: default
+hasTitleField: true
+name: Standaard
+section: 3ec5953f-6ca3-4842-849d-3c0ebdbae6a1 # Pagina's
+sortOrder: 1
+titleFormat: null
+titleTranslationKeyFormat: null
+titleTranslationMethod: site

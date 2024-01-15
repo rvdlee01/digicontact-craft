@@ -1,0 +1,39 @@
+fieldLayouts:
+  6b18b6b5-c8f6-4374-9d60-0b1d97d15e3c:
+    tabs:
+      -
+        elements:
+          -
+            autocapitalize: true
+            autocomplete: false
+            autocorrect: true
+            class: null
+            disabled: false
+            id: null
+            instructions: null
+            label: null
+            max: null
+            min: null
+            name: null
+            orientation: null
+            placeholder: null
+            readonly: false
+            requirable: false
+            size: null
+            step: null
+            tip: null
+            title: null
+            type: craft\fieldlayoutelements\assets\AssetTitleField
+            uid: 1ede4b88-6f43-4890-ad08-e20df64afcf7
+            warning: null
+            width: 100
+        name: Inhoud
+        uid: c0853eeb-3d7f-451c-819b-45d0cfbb3e1e
+fs: images
+handle: images
+name: Afbeeldingen
+sortOrder: 1
+titleTranslationKeyFormat: null
+titleTranslationMethod: site
+transformFs: images
+transformSubpath: ''

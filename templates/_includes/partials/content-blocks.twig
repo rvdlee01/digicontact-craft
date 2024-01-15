@@ -1,0 +1,14 @@
+{# Variables #}
+{% set contentBlocks = entry.contentMatrix.all() ?? null %}
+
+{# Template #}
+{% if contentBlocks|length %}
+    {% for block in contentBlocks %}
+        {% set anchor = block.anchor ?? null %}
+
+        <div {% if anchor %} id="{{ anchor }}"{% endif %} class="">
+            {% include "_includes/partials/content-blocks/" ~ block.type %}
+        </div>
+        
+    {% endfor %}
+{% endif %}

@@ -1,0 +1,10 @@
+headingLevels: false
+listPlugin: List
+name: Simple
+options:
+  toolbar:
+    - bold
+toolbar:
+  - heading
+  - bold
+  - '|'

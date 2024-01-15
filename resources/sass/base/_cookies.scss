@@ -1,0 +1,31 @@
+.toggle-checkbox {
+  ~ svg {
+    @apply opacity-0;
+  }
+
+  &.disabled {
+    ~ svg {
+      @apply opacity-100;
+    }
+  }
+
+  &:checked {
+    @apply right-0 border-[#38C172];
+
+    & + .toggle-label {
+      @apply bg-[#38C172];
+    }
+
+    ~ svg {
+      @apply opacity-100 delay-100;
+    }
+
+    &.disabled {
+      @apply border-[#D2D2D2];
+
+      & + .toggle-label {
+        @apply bg-[#D2D2D2];
+      }
+    }
+  }
+}

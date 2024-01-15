@@ -1,0 +1,19 @@
+{# Set variables #}
+{% set url = link_field.url ?? url ?? null %}
+{% set text = link_field.text ?? text ?? null %}
+{% set target = link_field.target ?? target ?? '_self' %} {# Default is '_self'. Other option: '_blank' #}
+{% set classes = classes ?? '' %}
+{% set aria_label = link_field.ariaLabel ?? aria_label ?? null %}
+
+{% if btn_inner is not defined %}
+    {% set btn_inner %}
+        {{ text }}
+    {% endset %}
+{% endif %}
+
+{% if url|length and url %}
+    <a href="{{ url }}" {% if classes %}class="{{ classes }}"{% endif %} target="{{ target }}" title="{{ text }}"
+        {% if target == '_blank' %}rel="noopener noreferrer"{% endif %}>{% apply spaceless %}{{ btn_inner|raw }}{% endapply %}</a>
+{% else %}
+    <button class="{{ classes }}" aria-label="{{ aria_label }}" title="{{ text }}">{% apply spaceless %}{{ btn_inner|raw }}{% endapply %}</button>
+{% endif %}

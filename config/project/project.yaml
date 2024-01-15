@@ -1,0 +1,179 @@
+dateModified: 1694094330
+elementSources:
+  craft\elements\Entry:
+    -
+      disabled: false
+      key: '*'
+      tableAttributes:
+        - section
+        - link
+      type: native
+    -
+      disabled: false
+      key: singles
+      tableAttributes:
+        - link
+      type: native
+    -
+      heading: Navigatie
+      type: heading
+    -
+      key: 'section:241c9473-f9af-4087-a595-ca0567f41e93' # Hoofdmenu
+      type: native
+email:
+  fromEmail: $SYSTEM_EMAIL
+  fromName: $SITE_NAME
+  replyToEmail: null
+  template: null
+  transportSettings:
+    messageStream: ''
+    token: $POSTMARK_SERVER_API_TOKEN
+  transportType: craftcms\postmark\Adapter
+fs:
+  files:
+    hasUrls: true
+    name: Bestanden
+    settings:
+      path: '@webroot/upload/files'
+    type: craft\fs\Local
+    url: /upload/files
+  images:
+    hasUrls: true
+    name: Afbeeldingen
+    settings:
+      path: '@webroot/upload/images'
+    type: craft\fs\Local
+    url: /upload/images
+  logos:
+    hasUrls: true
+    name: 'Logo''s'
+    settings:
+      path: '@webroot/upload/logos'
+    type: craft\fs\Local
+    url: /upload/logos
+meta:
+  __names__:
+    0d1d8236-5a08-48cf-861b-5d27bc2ea465: Bestanden # Bestanden
+    1ad41775-ee94-44fc-8b3e-982539ae85f2: Link # Link
+    01fbd320-869f-4cca-a22a-00fdb1a91bc8: Pagina # Pagina
+    2ae46a9f-5d57-42d5-b1a7-41d131d80926: $SITE_NAME # $SITE_NAME
+    3ec5953f-6ca3-4842-849d-3c0ebdbae6a1: 'Pagina''s' # Pagina's
+    5f299bc2-76d0-4d5c-9212-b2971891b3d1: 'Pagina niet gevonden' # Pagina niet gevonden
+    6b14e9b9-b60c-4284-a461-9fecb8f9d9c8: Afbeeldingen # Afbeeldingen
+    7a8918fa-64f0-4dbd-8c1f-776ff1eb60fe: Simple # Simple
+    9f30bcf1-020d-4b10-8ea0-3d1ff4584ed9: $SITE_NAME # $SITE_NAME
+    24f17415-8885-426b-a272-f0957203b94d: SEO # SEO
+    50b60208-9b1d-4e03-b961-5954874d95b7: 'Logo''s' # Logo's
+    68a697ab-e469-473a-8e9a-f80586424afe: Postcode # Postcode
+    70f2071a-601c-43ea-842a-b99041a654d1: Tekst # Tekst
+    80d9a262-7704-4c74-8105-fac8a1f4ea06: Homepagina # Homepagina
+    84fccc56-c4fe-4005-bee4-5d273b0ed8a5: Titel # Titel
+    86be41fc-d84d-4aba-be49-924f2f74c092: Homepagina # Homepagina
+    99d439d1-58f6-41cf-aa6c-8b7ef0df4dc3: 'Content beheerders' # Content beheerders
+    241c9473-f9af-4087-a595-ca0567f41e93: Hoofdmenu # Hoofdmenu
+    538f0283-03ce-41ce-b21f-86459dad4436: Afbeelding # Afbeelding
+    544d6461-e2e5-460b-a848-b8faa0664953: 'Social media' # Social media
+    554d42e2-5ffa-4509-8ff1-9daee2ebd682: Link # Link
+    631d433a-665a-4504-8838-ee074a04c526: 'Contact Form' # Contact Form
+    700d2951-8b0c-4967-a8ad-a1b4d75c8a39: Adres # Adres
+    5174fa4a-d816-424d-9c48-750436709f54: Default # Default
+    6906c1bc-4c61-4a8c-93e0-7136a4bebf9d: Contact # Contact
+    12036e9f-8cf5-41bc-9b21-2074cb4866d9: Standaard # Standaard
+    38492fce-56d6-4ccc-b99c-110a15bff331: Socials # Socials
+    95233b13-238a-4e2a-bd0e-8175395c6ff5: Tekst # Tekst
+    919010d9-02c1-4e92-89d9-c0493156b163: Tekst # Tekst
+    b20deca7-2b9a-43db-b175-7d84070b7e4d: 'Pagina niet gevonden' # Pagina niet gevonden
+    b1545ecb-a324-43f5-92c9-e69c40ae5e57: E-mailadres # E-mailadres
+    bc8624c2-e213-4ef9-9cb3-fe11ae404268: Telefoon # Telefoon
+    c2ea42cb-d78c-4720-a9de-6aae1a4555c4: Link # Link
+    c4532bd7-74ae-40c8-a338-21bee7692fdb: New # New
+    c5344793-bac6-4d26-89ec-f05f88942404: Anchor # Anchor
+    d4f121b8-86d2-4d9a-8541-ed80ca05b4c7: Contact # Contact
+    e4858655-0573-47a8-b27f-81be06276f46: Common # Common
+    ecdd2e9c-0d0c-4384-a787-0aed387e0072: Plaats # Plaats
+    f05fd935-32ef-49d1-b13b-42ee2a3bad75: Contact # Contact
+    f3f06cab-617e-47bd-b555-75b803e2927c: 'Algemene content' # Algemene content
+    f40f2712-8b81-4801-912f-4e1c1e87ab93: Footermenu # Footermenu
+    f629e0f1-40fa-4cba-96df-b5817346499c: Titel # Titel
+    fb48080e-a641-48b7-85c1-6d1d63184de4: Standaard # Standaard
+    fc46d3c0-9310-47be-99ba-719dffdecfc4: Contentblokken # Contentblokken
+plugins:
+  assetrev:
+    edition: standard
+    enabled: true
+    schemaVersion: 1.0.0
+  async-queue:
+    edition: standard
+    enabled: true
+    schemaVersion: 1.0.0
+  ckeditor:
+    edition: standard
+    enabled: true
+    schemaVersion: 3.0.0.0
+  formie:
+    edition: standard
+    enabled: true
+    licenseKey: CLWNZTANHWKD68KA6SEV6Q2A
+    schemaVersion: 2.0.10
+    settings:
+      ajaxTimeout: 10
+      alertEmails: null
+      defaultDateDisplayType: calendar
+      defaultDateTime: null
+      defaultDateValueOption: ''
+      defaultEmailTemplate: default
+      defaultFileUploadVolume: ''
+      defaultFormTemplate: ''
+      defaultInstructionsPosition: verbb\formie\positions\AboveInput
+      defaultLabelPosition: verbb\formie\positions\AboveInput
+      defaultPage: forms
+      emptyValuePlaceholder: 'No response.'
+      enableBackSubmission: true
+      enableCsrfValidationForGuests: true
+      enableLargeFieldStorage: false
+      enableUnloadWarning: true
+      includeDraftElementUsage: false
+      includeRevisionElementUsage: false
+      maxIncompleteSubmissionAge: 30
+      maxSentNotificationsAge: 30
+      pdfPaperOrientation: portrait
+      pdfPaperSize: letter
+      pluginName: Formulieren
+      queuePriority: null
+      saveSpam: true
+      sendEmailAlerts: false
+      sentNotifications: true
+      spamBehaviour: showSuccess
+      spamBehaviourMessage: ''
+      spamEmailNotifications: false
+      spamKeywords: ''
+      spamLimit: 500
+      useQueueForIntegrations: true
+      useQueueForNotifications: true
+  mailinliner:
+    edition: standard
+    enabled: true
+    schemaVersion: 1.0.0
+  postmark:
+    edition: standard
+    enabled: true
+    schemaVersion: 2.0.1
+  seo:
+    edition: standard
+    enabled: true
+    schemaVersion: 3.2.0
+  typedlinkfield:
+    edition: standard
+    enabled: true
+    schemaVersion: 2.0.0
+  vite:
+    edition: standard
+    enabled: true
+    schemaVersion: 1.0.0
+system:
+  edition: pro
+  live: true
+  name: $SITE_NAME
+  retryDuration: null
+  schemaVersion: 4.5.3.0
+  timeZone: Europe/Amsterdam

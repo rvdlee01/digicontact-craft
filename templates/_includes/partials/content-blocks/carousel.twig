@@ -1,0 +1,47 @@
+{# Variables #}
+
+
+{# Template #}
+<div class="w-full relative block overflow-hidden"
+    x-init="$carousel({
+        loop: false,
+        slidesPerView: 1.2,
+        spaceBetween: 24,
+        breakpoints: {
+            400: {
+                spaceBetween: 24,
+            },
+            768: {
+                slidesPerView: 'auto',
+                spaceBetween: 32,
+            },
+        }
+    })">
+    <div class="container flex justify-between items-start">
+        <div class="flex gap-3">
+            <button aria-label="Previous" class="swiper-prev enabled:hover:bg-opacity-80 disabled:opacity-10 disabled:cursor-not-allowed">
+                Vorige
+            </button>
+
+            <button aria-label="next" class="swiper-next enabled:hover:bg-opacity-80 disabled:opacity-10 disabled:cursor-not-allowed">
+                Volgende
+            </button>
+        </div>
+    </div>
+
+    <div class="w-full relative">
+        <div class="container mt-8">
+            <div class="swiper overflow-visible">
+                <div class="swiper-wrapper">
+                    {% for i in 1..10 %}
+
+                        <div class="swiper-slide w-full max-w-[541px] h-[200px] bg-blue-300">
+                            slide {{ loop.index }}
+                        </div>
+
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

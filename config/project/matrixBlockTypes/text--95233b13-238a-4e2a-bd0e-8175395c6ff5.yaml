@@ -1,0 +1,118 @@
+field: fc46d3c0-9310-47be-99ba-719dffdecfc4 # Contentblokken
+fieldLayouts:
+  2069dbbd-b5b6-41b3-bd98-1b4d5c81d4ce:
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            elementCondition: null
+            fieldUid: f629e0f1-40fa-4cba-96df-b5817346499c # Titel
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 61e262aa-cafa-4329-a8ef-b051bbb6f1e1
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 919010d9-02c1-4e92-89d9-c0493156b163 # Tekst
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: aa4696d5-15b5-4e13-aaed-a6c5f602a29e
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: c5344793-bac6-4d26-89ec-f05f88942404 # Anchor
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: bf864017-46e6-4da7-90dd-cb3cbce91d2b
+            userCondition: null
+            warning: null
+            width: 100
+        name: Content
+        uid: 9a82f4cf-9e81-4496-bf1b-188d3272c4bd
+        userCondition: null
+fields:
+  919010d9-02c1-4e92-89d9-c0493156b163: # Tekst
+    columnSuffix: supvftwi
+    contentColumnType: text
+    fieldGroup: null
+    handle: body
+    instructions: null
+    name: Tekst
+    searchable: false
+    settings:
+      availableTransforms: ''
+      availableVolumes: '*'
+      ckeConfig: 5174fa4a-d816-424d-9c48-750436709f54 # Default
+      columnType: text
+      defaultTransform: null
+      enableSourceEditingForNonAdmins: false
+      purifierConfig: null
+      purifyHtml: true
+      showUnpermittedFiles: false
+      showUnpermittedVolumes: false
+      showWordCount: false
+      wordLimit: null
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\ckeditor\Field
+  c5344793-bac6-4d26-89ec-f05f88942404: # Anchor
+    columnSuffix: mqwffjaa
+    contentColumnType: text
+    fieldGroup: null
+    handle: anchor
+    instructions: null
+    name: Anchor
+    searchable: false
+    settings:
+      byteLimit: null
+      charLimit: null
+      code: false
+      columnType: null
+      initialRows: 4
+      multiline: false
+      placeholder: null
+      uiMode: normal
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\PlainText
+  f629e0f1-40fa-4cba-96df-b5817346499c: # Titel
+    columnSuffix: okdccnac
+    contentColumnType: text
+    fieldGroup: null
+    handle: heading
+    instructions: null
+    name: Titel
+    searchable: false
+    settings:
+      availableTransforms: ''
+      availableVolumes: '*'
+      ckeConfig: 7a8918fa-64f0-4dbd-8c1f-776ff1eb60fe # Simple
+      columnType: text
+      defaultTransform: null
+      enableSourceEditingForNonAdmins: false
+      purifierConfig: null
+      purifyHtml: true
+      showUnpermittedFiles: false
+      showUnpermittedVolumes: false
+      showWordCount: false
+      wordLimit: null
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\ckeditor\Field
+handle: text
+name: Tekst
+sortOrder: 1

@@ -1,0 +1,11 @@
+[
+  {
+    "name": "app-1",
+    "ip": "162.55.53.104",
+    "username": "boilerplate-craft",
+    "port": "22",
+    "beforeHooks": "$PHP ./craft up",
+    "afterHooks": "",
+    "path": "/home/boilerplate-craft/boilerplate-craft.app-1.creativeorange.nl"
+  }
+]

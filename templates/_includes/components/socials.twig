@@ -1,0 +1,15 @@
+{# Variables #}
+{% set classes = classes ?? null %}
+{% set socials = socials.socials ?? null %}
+
+{# Template #}
+{% if socials %}
+    <div class="flex h-max items-center gap-3 {{ classes ?? null }}">
+        {% for item in socials %}
+            {% set channel = item.type|replace({'fa-': '', '-in': '', '-f': ''}) %}
+            <a href="{{ item.url }}" target="_blank" aria-label="Volg ons op {{ channel }}" class="group w-8 relative h-8 bg-red hover:bg-black transition-colors">
+                <i class="fa-brands {{ item.type }} text-xl text-white top-1/2 left-1/2 absolute -translate-x-1/2 -translate-y-1/2"></i>
+            </a>
+        {% endfor %}
+    </div>
+{% endif %}

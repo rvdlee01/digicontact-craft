@@ -1,0 +1,23 @@
+columnSuffix: uobpvkkz
+contentColumnType: text
+fieldGroup: e4858655-0573-47a8-b27f-81be06276f46 # Common
+handle: heading
+instructions: null
+name: Titel
+searchable: false
+settings:
+  availableTransforms: ''
+  availableVolumes: '*'
+  ckeConfig: 7a8918fa-64f0-4dbd-8c1f-776ff1eb60fe # Simple
+  columnType: text
+  defaultTransform: null
+  enableSourceEditingForNonAdmins: false
+  purifierConfig: null
+  purifyHtml: true
+  showUnpermittedFiles: false
+  showUnpermittedVolumes: false
+  showWordCount: false
+  wordLimit: null
+translationKeyFormat: null
+translationMethod: none
+type: craft\ckeditor\Field

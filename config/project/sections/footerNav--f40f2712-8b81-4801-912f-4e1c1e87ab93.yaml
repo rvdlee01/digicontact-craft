@@ -1,0 +1,15 @@
+defaultPlacement: end
+enableVersioning: true
+handle: footerNav
+name: Footermenu
+propagationMethod: all
+siteSettings:
+  2ae46a9f-5d57-42d5-b1a7-41d131d80926: # $SITE_NAME
+    enabledByDefault: true
+    hasUrls: false
+    template: null
+    uriFormat: null
+structure:
+  maxLevels: null
+  uid: 69c14b6c-3f2b-4003-a3dd-e33c71fa3c78
+type: structure

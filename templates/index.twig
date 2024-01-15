@@ -1,0 +1,9 @@
+{% extends "_layout/base" %}
+
+{% block content %}
+    {% include "_includes/partials/content-blocks/carousel" %}
+
+    <div class="mx-auto max-w-[500px] mt-10">
+        {{ craft.formie.renderForm('contactform') }}
+    </div>
+{% endblock %}

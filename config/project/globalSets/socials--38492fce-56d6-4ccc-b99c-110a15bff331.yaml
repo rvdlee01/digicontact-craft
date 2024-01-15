@@ -1,0 +1,20 @@
+fieldLayouts:
+  6897d832-89bd-4584-bcb4-373c11438bd9:
+    tabs:
+      -
+        elements:
+          -
+            fieldUid: 544d6461-e2e5-460b-a848-b8faa0664953 # Social media
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 042e588c-d5af-4713-a4e2-fd15374cfece
+            warning: null
+            width: 100
+        name: Kanalen
+        uid: d5fcf7d4-f41a-40de-9484-0bea7f9917d8
+handle: socials
+name: Socials
+sortOrder: 2

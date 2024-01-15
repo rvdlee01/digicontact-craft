@@ -1,0 +1,28 @@
+{% set primaryNav = craft.entries.section('primaryNav').all() %}
+{% set segments = craft.app.request.segments() %}
+{% if primaryNav|length %}
+    <nav>
+        <ul>
+            {% nav item in primaryNav %}
+                {% set state = null %}
+
+                {% if segments|length %}
+                    {% set segment = item.entryLink.element|lower|replace(' ', '-') == craft.app.request.segments|first %}
+                    {% set state = (item.entryLink is defined and craft.app.request.absoluteUrl == item.entryLink.getUrl()) or segment ? 'active' : '' %}
+                {% endif %}
+
+                <li class="{{ item.entryLink is defined and (segments|length and (segments[0] == item.entryLink.text|lower|replace(' ', '-') or state == 'active')) ? 'current' : null }}{% if item.hasDescendants() %} parent{% endif %}">
+                    <a href="{{ item.entryLink.url }}">
+                        {{ item.entryLink.customText|length ? item.entryLink.customText : item.title }}
+                    </a>
+
+                    {% ifchildren %}
+                        <ul>
+                            {% children %}
+                        </ul>
+                    {% endifchildren %}
+                </li>
+            {% endnav %}
+        </ul>
+    </nav>
+{% endif %}

@@ -1,0 +1,26 @@
+{
+  "buttons": [
+    "html",
+    "formatting",
+    "bold",
+    "italic",
+    "unorderedlist",
+    "orderedlist",
+    "link",
+    "image",
+    "video"
+  ],
+  "formattingHide": [
+    "blockquote",
+    "h1",
+    "pre",
+    "h5",
+    "h6"
+  ],
+  "plugins": [
+    "fullscreen",
+    "video"
+  ],
+  "linkNewTab": true,
+  "toolbarFixed": true
+}

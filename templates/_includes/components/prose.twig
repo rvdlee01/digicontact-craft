@@ -1,0 +1,23 @@
+{# Variables #}
+{% set content = content ?? null %}
+{% set classes = classes ?? null %}
+{# {% set textWhite = textWhite ?? false %} #}
+
+{# Template #}
+{% if content %}
+    <div class="prose relative inline-block w-full max-w-[inherit]
+    prose-p:font-normal
+    {# hover:prose-a:text-red-500 prose-a:transition-colors prose-a:underline
+    prose-headings:font-bold prose-headings:font-sovereign
+    prose-ul:pl-4
+    prose-li:pl-3 #}
+    {# prose-h3: #}
+    {# prose-h2: #}
+    {# prose-h3: #}
+    {# prose-h4: #}
+    {# prose-ul: #}
+    {# prose-li: #}
+    {{ classes ?? null }}">
+        {{ content|raw }}
+    </div>
+{% endif %}

@@ -1,0 +1,34 @@
+{% set baseWidth = transform is defined and image.extension != 'svg' ? image.getWidth(transform) : image.width %}
+{% set baseHeight = transform is defined and image.extension != 'svg'  ? image.getHeight(transform) : image.height %}
+
+{% set cacheHash = {
+    id: image.id,
+    updated: image.dateUpdated.getTimestamp(),
+    classes: classes ?? null,
+    width: baseWidth,
+    height: baseHeight,
+} | json_encode %}
+
+{% set lazy = lazy ?? true %}
+
+{% cache globally using key cacheHash %}
+    <picture>
+        {% if image.extension != 'svg' %}
+            {% do image.setTransform({ width: baseWidth, height: baseHeight, format: 'webp' }) %}
+            {{ tag('source', {
+                type: "image/webp",
+                srcset: image.getSrcset(['1x', '2x'])
+            }) }}
+        {% endif %}
+        {% do image.setTransform({ width: baseWidth, height: baseHeight }) %}
+        {{ tag('img', {
+            src: image.url,
+            width: image.width,
+            height: image.height,
+            srcset: image.getSrcset(['2x']),
+            alt: image.title,
+            loading: lazy ? 'lazy' : null,
+            class: classes ?? null
+        }) }}
+    </picture>
+{% endcache %}

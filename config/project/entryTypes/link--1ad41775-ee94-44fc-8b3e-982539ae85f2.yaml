@@ -1,0 +1,49 @@
+fieldLayouts:
+  6806e6f4-5ce3-4d7e-976b-7aa411dba602:
+    tabs:
+      -
+        elements:
+          -
+            autocapitalize: true
+            autocomplete: false
+            autocorrect: true
+            class: null
+            disabled: false
+            id: null
+            instructions: null
+            label: null
+            max: null
+            min: null
+            name: null
+            orientation: null
+            placeholder: null
+            readonly: false
+            requirable: false
+            size: null
+            step: null
+            tip: null
+            title: null
+            type: craft\fieldlayoutelements\entries\EntryTitleField
+            uid: b8c6a310-fb02-46ac-84e6-59ac8d1f9a34
+            warning: null
+            width: 100
+          -
+            fieldUid: 01fbd320-869f-4cca-a22a-00fdb1a91bc8 # Pagina
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: d45edd12-6645-4f7e-8081-8309e4f6ded0
+            warning: null
+            width: 100
+        name: Inhoud
+        uid: ecae7630-f676-4825-9d36-ecff03c3b40e
+handle: link
+hasTitleField: false
+name: Link
+section: 241c9473-f9af-4087-a595-ca0567f41e93 # Hoofdmenu
+sortOrder: 1
+titleFormat: '{entryLink.getText|length > 50 ? entryTitle|slice(0, 50) ~ ''...'' : entryLink.getText}'
+titleTranslationKeyFormat: null
+titleTranslationMethod: site

@@ -1,0 +1,117 @@
+columnSuffix: nqdfbbaa
+contentColumnType: text
+fieldGroup: e4858655-0573-47a8-b27f-81be06276f46 # Common
+handle: socials
+instructions: null
+name: 'Social media'
+searchable: false
+settings:
+  addRowLabel: 'Voeg een kanaal toe'
+  columnType: text
+  columns:
+    __assoc__:
+      -
+        - col1
+        -
+          __assoc__:
+            -
+              - heading
+              - Kanaal
+            -
+              - handle
+              - type
+            -
+              - width
+              - 40%
+            -
+              - type
+              - select
+            -
+              - options
+              -
+                -
+                  __assoc__:
+                    -
+                      - label
+                      - Facebook
+                    -
+                      - value
+                      - fa-facebook-f
+                    -
+                      - default
+                      - false
+                -
+                  __assoc__:
+                    -
+                      - label
+                      - Instagram
+                    -
+                      - value
+                      - fa-instagram
+                    -
+                      - default
+                      - false
+                -
+                  __assoc__:
+                    -
+                      - label
+                      - LinkedIn
+                    -
+                      - value
+                      - fa-linkedin-in
+                    -
+                      - default
+                      - false
+                -
+                  __assoc__:
+                    -
+                      - label
+                      - Twitter
+                    -
+                      - value
+                      - fa-x-twitter
+                    -
+                      - default
+                      - false
+                -
+                  __assoc__:
+                    -
+                      - label
+                      - Youtube
+                    -
+                      - value
+                      - fa-youtube
+                    -
+                      - default
+                      - false
+      -
+        - col2
+        -
+          __assoc__:
+            -
+              - heading
+              - Url
+            -
+              - handle
+              - url
+            -
+              - width
+              - 60%
+            -
+              - type
+              - url
+  defaults:
+    -
+      __assoc__:
+        -
+          - col1
+          - fa-facebook-f
+        -
+          - col2
+          - ''
+  maxRows: null
+  minRows: null
+  staticRows: false
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\Table

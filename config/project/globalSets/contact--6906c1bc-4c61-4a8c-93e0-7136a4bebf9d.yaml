@@ -1,0 +1,60 @@
+fieldLayouts:
+  0cc172fa-2ab2-4a55-a359-9cd12044f87e:
+    tabs:
+      -
+        elements:
+          -
+            fieldUid: 700d2951-8b0c-4967-a8ad-a1b4d75c8a39 # Adres
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 61c19501-a910-4d30-be1d-f4ebe3d7c4a1
+            warning: null
+            width: 100
+          -
+            fieldUid: 68a697ab-e469-473a-8e9a-f80586424afe # Postcode
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: dffd6c73-1f80-4637-b56b-071ef4e2d692
+            warning: null
+            width: 100
+          -
+            fieldUid: ecdd2e9c-0d0c-4384-a787-0aed387e0072 # Plaats
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: b90b55bf-edeb-4f03-bdfe-f09f07eca07a
+            warning: null
+            width: 100
+          -
+            fieldUid: b1545ecb-a324-43f5-92c9-e69c40ae5e57 # E-mailadres
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: a9591714-4a54-439a-acd4-072930ce6725
+            warning: null
+            width: 100
+          -
+            fieldUid: bc8624c2-e213-4ef9-9cb3-fe11ae404268 # Telefoon
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: be6f32d2-7b76-4d6e-9d73-5d7210f341cd
+            warning: null
+            width: 100
+        name: Velden
+        uid: 837bb973-b81e-4acf-95fe-e8b99cda541f
+handle: contact
+name: Contact
+sortOrder: 1

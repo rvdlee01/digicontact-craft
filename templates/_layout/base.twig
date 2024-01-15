@@ -1,0 +1,69 @@
+<!doctype html>
+<html class="no-js" lang="{{ craft.app.language }}">
+<head>
+    <!-- Ontworpen en ontwikkeld door creativeorange.nl -->
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, maximum-scale=1">
+
+    {% if craft.app.config.env != 'production' %}
+        <meta name="robots" content="noindex">
+    {% endif %}
+
+    {% if craft.app.config.env == 'production' %}
+        <!-- Google Tag Manager -->
+        <script>(function (w, d, s, l, i) {
+                w[l] = w[l] || [];
+                w[l].push({
+                    'gtm.start':
+                        new Date().getTime(), event: 'gtm.js'
+                });
+                var f = d.getElementsByTagName(s)[0],
+                    j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : '';
+                j.async = true;
+                j.src =
+                    'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+                f.parentNode.insertBefore(j, f);
+            })(window, document, 'script', 'dataLayer', '{{ getenv('GTM_ID') }}');</script>
+        <!-- End Google Tag Manager -->
+    {% endif %}
+
+    {{ craft.vite.script("resources/js/app.js", false) }}
+
+    <link rel="preload" href="https://cdn.creativeorange.nl/fontawesome/latest/css/all.min.css" as="style"
+          onload="this.onload=null;this.rel='stylesheet'">
+    <noscript>
+        <link rel="stylesheet" href="https://cdn.creativeorange.nl/fontawesome/latest/css/all.min.css">
+        <link rel="stylesheet" href="https://cdn.creativeorange.nl/fontawesome/latest/css/sharp-solid.min.css">
+    </noscript>
+
+    {# {% include "_includes/favicon" %} #}
+    {% hook 'seo' %}
+</head>
+
+<body>
+{% if craft.app.config.env == 'production' %}
+    <!-- Google Tag Manager (noscript) -->
+    <noscript>
+        <iframe src="https://www.googletagmanager.com/ns.html?id={{ getenv('GTM_ID') }}"
+                height="0" width="0" style="display:none;visibility:hidden"></iframe>
+    </noscript>
+    <!-- End Google Tag Manager (noscript) -->
+{% endif %}
+
+<div id="app">
+    {% include "_includes/partials/header" %}
+    {% block content %}{% endblock %}
+    {% include "_includes/partials/footer" %}
+    {#     {% include "_includes/cookies" %} #}
+</div>
+
+
+{% block scripts %}
+    <script type="text/javascript">
+        const needletail_read_key = '{{ getenv('NEEDLETAIL_READ_KEY') }}';
+        const needletail_prefix = '{{ getenv('NEEDLETAIL_PREFIX') }}';
+    </script>
+{% endblock %}
+</body>
+</html>

@@ -1,0 +1,49 @@
+{% set segments = craft.app.request.segments() %}
+
+<div itemscope itemtype="http://schema.org/BreadcrumbList">
+    <div itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+        <a href="/" title="Terug naar de homepagina van {{ siteName }}" itemprop="item">
+            <span itemprop="name">Home</span>
+            <meta itemprop="position" content="1" />
+        </a>
+    </div>
+
+    {% for index, segment in segments %}
+        {# Set current index and define slug #}
+        {% set currentIndex = loop.index %}
+        {% set slug = '' ?? null %}
+
+        {# Loop trough segments before current segment #}
+        {% for i, item in 1..currentIndex %}
+            {% set slug = slug ~ '/' ~ segments[i] %}
+        {% endfor %}
+
+        {# Set type of button and url #}
+        {% set buttonType = (loop.last) ? 'button' : 'a' %}
+        {% set url = '/' ?? null %}
+
+        {# If current is not last the segment > generate the url #}
+        {% if loop.index < segments|length %}
+            {% set url = url ~ segments[loop.index - 1]  %}
+        {% endif %}
+
+        {# Set link text #}
+        {% set linkText = segment|length > 30 ? segment|slice(0, 26)|replace('-', ' ') ~ '...' : segment|replace('-', ' ') %}
+
+        {% if loop.last %}
+            {% set text = linkText|length > 20 ? linkText|slice(0, 20) ~ '...' : linkText %}
+            <div itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+                <span itemprop="name">{{ text|capitalize }}</span>
+                <meta itemprop="position" content="{{ loop.index + 1 }}" />
+            </div>
+        {% else %}
+            <div itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+                <a href="{{ slug ?? url }}" itemprop="item">
+                    <span itemprop="name">{{ linkText|capitalize }}</span>
+                    <meta itemprop="position" content="{{ loop.index + 1 }}" />
+                </a>
+            </div>
+        {% endif %}
+    {% endfor %}
+</div>
+
